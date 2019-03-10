@@ -4,16 +4,26 @@
 {% block content %}
 {{block.super}}
 
+    <div class="">
+    <div class="w3-bar w3-white w3-padding w3-wide w3-card ">
+        <a href="#" class="w3-bar-item w3-button"><i class="fab fa-instagram fa-2x"> | Instagram </i>
+        </a>
 
+        <input type="text" class="w3-bar-item w3-input w3-light-grey w3-display-middle w3-hide-small" placeholder="Search">
+        <a href="#" class="w3-bar-item w3-right "><i class="far fa-user"></i></a>
+    </div>
+</div>
+
+<div class="">
     <div class="w3-row">
-        <div class="w3-third w3-hide-small">
+        <div class="col-md-2 w3-hide-small">
 
 
         </div>
-        <div class="w3-third ">
+        <div class="col-md-8">
             {% for pic in pics %}
 
-            <div class="w3-card-4">
+            <div class="w3-card-4 w3-white w3">
 
                 <header class="w3-container">
                     <a href="">
@@ -39,11 +49,11 @@
 
             {% endfor %}
         </div>
-        <div class="w3-third">
+        <div class="col-md-2">
 
         </div>
     </div>
-
+</div>
 
 
 {% endblock %}
