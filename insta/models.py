@@ -46,6 +46,7 @@ class Picture(models.Model):
     def delete_pic(self):
         self.delete()
 
+
     @classmethod
     def get_image_by_id(id):
         pic = Picture.objects.get(id)
