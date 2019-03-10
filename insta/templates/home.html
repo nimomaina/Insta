@@ -14,8 +14,8 @@
     </div>
 </div>
 
-<div class="">
-    <div class="w3-row">
+<div class="w3-container w3-section">
+    <div class="w3-row w3-margin">
         <div class="col-md-2 w3-hide-small">
 
 
@@ -23,25 +23,26 @@
         <div class="col-md-8">
             {% for pic in pics %}
 
-            <div class="w3-card-4 w3-white w3">
+            <div class="w3-card-4 w3-white ">
 
-                <header class="w3-container">
+                <header class="w3-container w3-padding">
                     <a href="">
                         <img src="" alt="Avatar" class="w3-left w3-circle">
                     </a>
                 </header>
 
-                <div class="">
+                <div>
 
-                    <hr>
                     <img src="{{pic.image.url}}" class="w3-image" >
 
                 </div>
                 <div class="w3-container">
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
-                    <hr>
+                    <i class="far fa-heart fa-2x w3-margin"></i>
+
+                    <i class="far fa-comment fa-2x "></i>
                     <p>{{pic.caption}}</p>
+                    <hr>
+
                 </div>
 
 
