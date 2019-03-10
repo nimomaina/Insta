@@ -1,39 +1,48 @@
-{%extends "registration/base.html"%} {% load bootstrap3 %}
+{%extends "registration/base.html"%}
+{% load bootstrap3 %}
 {% block content %}
 <div class="container">
-  <div class="row">
-    <!-- Empty div -->
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      {% if form.errors %}
+
+    <div class="w3-row-padding">
+
+        <div class="w3-half  w3-hide-medium w3-hide-small">
+            <img src="https://instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png">
+
+        </div>
+        <div class="w3-half w3-mobile">
+              {% if form.errors %}
         <p> Some Information Might be Incorrect </p>
       {% endif %}
-      <div class="panel panel-default">
+            <div class="w3-card-4">
 
-        <div class="panel-heading">
-          <h3 class="text-center">Sign Up</h3>
-        </div>
-        <div class="panel-body">
 
-          <form  action="/accounts/register/" method="post">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+                <header class="w3-container ">
+                    <h3 class="text-center">Sign Up</h3>
+                </header>
+                <div class="w3-container">
+
+                    <form action="/accounts/register/" method="post" class="w3-container">
+                        {% csrf_token %}
+                                    {% bootstrap_form form%}
+
+
+
+                        <div class="form-group">
+                            <input type="submit" class="w3-button w3-block w3-blue w3-round" value="Sign up">
+                        </div>
+
+                        <input type="hidden" name="next" value="{{next}}">
+
+                    </form>
+
+                </div>
+
             </div>
-
-            <input type="hidden" name="next" value="{{next}}">
-
-          </form>
-
         </div>
 
-      </div>
 
     </div>
-    <!-- empty div -->
-    <div class="col-md-4"></div>
-  </div>
 </div>
+
 
 {% endblock %}
