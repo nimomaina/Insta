@@ -9,6 +9,6 @@ from . models import *
 @login_required(login_url='/accounts/login/')
 def home(request):
     current_user = request.user
-    all_images = Picture.objects.all()
+    pics = Picture.objects.all()
     profile = Profile.objects.all()
     return render(request,'home.html',locals())

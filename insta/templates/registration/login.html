@@ -2,31 +2,33 @@
 {% load bootstrap3 %}
 {% block content %}
 <div class="container">
+
     <div class="w3-row-padding">
         <div class="w3-col m2 w3-hide-small">
 
         </div>
-        <div class="w3-col m4 w3-hide-small">
+        <div class="w3-col m3 w3-hide-small">
             <img src="https://instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png">
 
         </div>
-        <div class="w3-col m4">
+        <div class="w3-col m5 w3-right">
             {% if form.errors %}
             <p> Password or Username is incorrect </p>
             {% endif %}
-            <div class="panel panel-default">
+            <div class="w3-card-4">
 
-                <div class="panel-heading">
+
+                <header class="w3-container ">
                     <h3 class="text-center">Sign In</h3>
-                </div>
-                <div class="panel-body">
+                </header>
+                <div class="w3-container">
 
                     <form action="/accounts/login/" method="post">
                         {% csrf_token %}
                         {% bootstrap_form form%}
 
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm" value="Login">
+                            <input type="submit" class="w3-button w3-block w3-blue w3-round" value="Login">
                         </div>
 
                         <input type="hidden" name="next" value="{{next}}">

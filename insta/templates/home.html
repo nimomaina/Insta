@@ -4,23 +4,30 @@
 {% block content %}
 {{block.super}}
 
-<div class="w3-card-4">
+<div class="w3-container">
+    {% for pic in pics %}
+    <div class="w3-card-4">
 
-    <header class="w3-container">
-        <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
-        <h3>John Doe</h3>
-    </header>
+        <header class="w3-container">
+            <a href="{% url 'showprofile' id=image.profile.id %}">
+                             <img src="{{image.profile_details.profile_pic.cdn_url}}"  alt="Avatar" class="w3-left w3-circle">
+ </a>
+        </header>
 
-    <div class="w3-container">
+        <div class="w3-container">
 
-        <hr>
-        <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+            <hr>
+            <img src="{{pic.image.url}}" >
+
+        </div>
+        <div class="w3-container">
+        </div>
+
 
     </div>
-    <div class="w3-container w3-center">
-        <p>The Italian / Austrian Alps</p>
-    </div>
 
+    {% endfor %}
 
 </div>
+
 {% endblock %}
