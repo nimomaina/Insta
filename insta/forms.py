@@ -6,13 +6,3 @@ class PictureForm(forms.ModelForm):
         model = Picture
         fields = ('image', 'caption')
 
-
-class ProfileForm(forms.ModelForm):
-    class Meta:
-        model = Profile
-        exclude=['owner']
-
-class CommentForm(forms.ModelForm):
-    class Meta:
-        model = Comment
-        exclude = ['imagey', 'comment_owner']
