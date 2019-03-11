@@ -8,6 +8,7 @@ urlpatterns=[
 
     url('^$',views.home,name='home'),
     url(r'^profile/', views.profile, name='profile'),
+    url(r'^upload/', views.form_upload, name='upload'),
 
 ]
 

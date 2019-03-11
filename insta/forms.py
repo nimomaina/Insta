@@ -4,4 +4,4 @@ from .models import *
 class PictureForm(forms.ModelForm):
     class Meta:
         model = Picture
-        fields = ('image', 'name','caption')
+        fields = ('image', 'name','caption','owner')

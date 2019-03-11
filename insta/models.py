@@ -9,14 +9,12 @@ from tinymce.models import HTMLField
 # Create your models here.
 
 class Profile(models.Model):
-    profile_image =models.ImageField( blank=True, default='default.jpg', upload_to='profile/')
+    profile_image = models.ImageField( blank=True, default='default.jpg', upload_to='profile/')
     bio = models.CharField(max_length=255)
     user = models.OneToOneField(User,blank=True, on_delete=models.CASCADE, related_name="profile")
 
     def __str__(self):
         return str(self.user)
-
-
 
 
     def profile_save(self):
@@ -40,8 +38,8 @@ class Picture(models.Model):
     image = models.ImageField(upload_to='uploads/', default='default.jpg')
     name = models.CharField(max_length=30)
     caption = models.TextField(blank=True)
-    profile = models.ForeignKey(User, blank=True, on_delete=models.CASCADE)
-    profile_details = models.ForeignKey(Profile)
+    likes = models.ManyToManyField(User,related_name='likes',blank=True)
+    owner = models.ForeignKey(User, blank=True, on_delete=models.CASCADE)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
 

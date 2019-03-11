@@ -4,6 +4,8 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 import datetime as dt
 from django.contrib.auth import views
 from . models import *
+from .forms import *
+
 # Create your views here.
 
 
@@ -17,8 +19,20 @@ def home(request):
 
 @login_required(login_url='/accounts/login/')
 def profile(request):
-    current_user = request.user
+    current_ = request.user
     pics = Picture.objects.all()
     profile = Profile.objects.all()
 
     return render(request, 'profile/profile.html',locals())
+
+def form_upload(request):
+    if request.method == 'POST':
+        form = PictureForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = PictureForm()
+    return render(request, 'upload.html', {
+        'form': form
+    })
