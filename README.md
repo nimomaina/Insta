@@ -23,7 +23,7 @@ Nimo-Insta is a web application that allows users to upload photos, view other p
 | View Home | Click Home | Loads the home page with pictures displayed |
 | View User Profile  | Click on username or view profile  | Profile page with users information |
 | Like and comment on pictures | like and comment | Number of likes increases and comments are displayed|
-| Filter images by location | Filter location in dropdown menu | Images taken in that location|
+| Follow other users | Click on follow | Their photos are displayed on users timeline|
 
 ## Technologies Used
 * Python
@@ -32,7 +32,7 @@ Nimo-Insta is a web application that allows users to upload photos, view other p
 * Django
 
 ## Application link
-https://nimo-gallery.herokuapp.com/
+https://nimo-insta.herokuapp.com/
 
 ## Prerequisites
 * Python 3.6 required
@@ -40,8 +40,8 @@ https://nimo-gallery.herokuapp.com/
 
 ## Setup/Installation Requirements
 Follow the following commands to run the project
-* git clone/download ```https://github.com/nimomaina/Gallery.git```
-* cd Gallery
+* git clone/download ```https://github.com/nimomaina/Insta.git```
+* cd Insta
 * Edit the start.sh file with your api key from the news.org website
 * Install required files in requirements.txt
 * Run ```python3.6 manage.py runserver```
