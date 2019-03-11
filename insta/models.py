@@ -42,6 +42,8 @@ class Picture(models.Model):
     caption = models.TextField(blank=True)
     profile = models.ForeignKey(User, blank=True, on_delete=models.CASCADE)
     profile_details = models.ForeignKey(Profile)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
 
     def __str__(self):
         return str(self.name)
