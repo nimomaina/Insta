@@ -31,7 +31,7 @@ def form_upload(request):
         form = PictureForm(request.POST, request.FILES)
         if form.is_valid():
             picture = form.save(commit=False)
-            picture.owner = current_user.profile
+            picture.owner = current_user
             picture.save()
             return redirect('home')
     else:
