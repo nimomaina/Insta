@@ -14,5 +14,11 @@ def home(request):
     profile = Profile.objects.all()
     return render(request,'home.html',locals())
 
+
+@login_required(login_url='/accounts/login/')
 def profile(request):
-    return render(request, profile/profile.html)
+    current_user = request.user
+    pics = Picture.objects.all()
+    profile = Profile.objects.all()
+
+    return render(request, 'profile/profile.html',locals())
