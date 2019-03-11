@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76fd75e9-14e5-44b0-b2ee-3b7c70357571" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/clone/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/clone/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insta/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/insta/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/insta/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +49,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clone/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#639#680#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,11 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/insta/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="255">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,10 +153,10 @@
         <option value="$PROJECT_DIR$/insta/models.py" />
         <option value="$PROJECT_DIR$/insta/templates/base.html" />
         <option value="$PROJECT_DIR$/insta/templates/home.html" />
-        <option value="$PROJECT_DIR$/insta/views.py" />
         <option value="$PROJECT_DIR$/insta/urls.py" />
         <option value="$PROJECT_DIR$/insta/templates/navbar.html" />
         <option value="$PROJECT_DIR$/clone/urls.py" />
+        <option value="$PROJECT_DIR$/insta/views.py" />
       </list>
     </option>
   </component>
@@ -262,7 +268,7 @@
     <frame x="683" y="25" width="683" height="702" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14415781" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28831562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -361,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/insta/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insta/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -400,8 +399,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clone/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="324">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#639#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

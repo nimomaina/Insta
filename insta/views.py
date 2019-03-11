@@ -13,3 +13,6 @@ def home(request):
     pics = Picture.objects.all()
     profile = Profile.objects.all()
     return render(request,'home.html',locals())
+
+def profile(request):
+    return render(request, profile/profile.html)
