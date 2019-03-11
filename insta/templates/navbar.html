@@ -1,7 +1,7 @@
 <div class=" ">
     <div class="w3-bar w3-white  w3-card ">
         <div class="container">
-            <a href="#" class="w3-bar-item " style="border-right: 1px solid #000"><i
+            <a href="{%url'home'%}" class="w3-bar-item " style="border-right: 1px solid #000"><i
                     class="fab fa-instagram fa-2x"> </i>
             </a>
             <h2 class="w3-bar-item" style="font-family: 'Lobster';font-weight:lighter ">Instagram
@@ -10,7 +10,7 @@
             <input type="text" class="w3-bar-item w3-input w3-center w3-light-grey w3-block w3-hide-small"
                    placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome; margin-left:20%;margin-top:2%">
 
-            <div class="w3-right">
+            <div class="w3-right w3-hide-small">
                 {% if user.is_authenticated %}
                 <a href="/upload" class="w3-bar-item "><i class="fas fa-upload fa-2x"></i></a>
 
