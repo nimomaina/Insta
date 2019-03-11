@@ -42,7 +42,6 @@ https://nimo-insta.herokuapp.com/
 Follow the following commands to run the project
 * git clone/download ```https://github.com/nimomaina/Insta.git```
 * cd Insta
-* Edit the start.sh file with your api key from the news.org website
 * Install required files in requirements.txt
 * Run ```python3.6 manage.py runserver```
 `
