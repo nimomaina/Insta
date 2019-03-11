@@ -18,8 +18,8 @@
                 <header class="w3-container w3-padding">
 
                     <a href="/profile">
-                        <img src="{{pic.profile_image.url}}" alt="Avatar" class=" w3-left w3-circle" style="max-width:10%">
-                         <p><strong>  {{pic.profile.username}}</strong></p>
+                        <img src="{{pic.owner.profile_image.url}}" alt="Avatar" class=" w3-left w3-circle" style="max-width:10%">
+                         <p><strong>{{pic.owner.username}}</strong></p>
                     </a>
 
 
@@ -31,7 +31,7 @@
 
                 </div>
                 <div class="w3-container">
-                    <i class="far fa-heart fa-2x w3-margin"></i>
+
 
                     <i class="far fa-comment fa-2x "></i>
                     <p class="w3-margin-left"><strong> {{pic.profile.username}} </strong>{{pic.caption}}</p>

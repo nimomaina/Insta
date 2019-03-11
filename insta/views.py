@@ -19,20 +19,21 @@ def home(request):
 
 @login_required(login_url='/accounts/login/')
 def profile(request):
-    current_ = request.user
+    current_user = request.user
     pics = Picture.objects.all()
     profile = Profile.objects.all()
 
     return render(request, 'profile/profile.html',locals())
 
 def form_upload(request):
+    current_user= request.user
     if request.method == 'POST':
         form = PictureForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            picture = form.save(commit=False)
+            picture.owner = current_user.profile
+            picture.save()
             return redirect('home')
     else:
         form = PictureForm()
-    return render(request, 'upload.html', {
-        'form': form
-    })
+    return render(request, 'upload.html', {'form': form})
