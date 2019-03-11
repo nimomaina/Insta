@@ -4,23 +4,7 @@
 {% block content %}
 {{block.super}}
 
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-padding  w3-card ">
-        <a href="#" class="w3-bar-item " style="border-right: 1px solid #000"><i class="fab fa-instagram fa-2x"> </i>
-        </a>
-        <h2 class="w3-bar-item" style="font-family: 'Lobster'; ">Instagram
-        </h2>
-
-        <input type="text" class="w3-bar-item w3-input w3-light-grey w3-display-middle w3-hide-small"
-               placeholder="Search">
-
-        <a href="#" class="w3-bar-item w3-right "><i class="far fa-user fa-2x"></i></a>
-        <a href="#" class="w3-bar-item w3-right "><i class="fas fa-upload fa-2x"></i></a>
-
-    </div>
-</div>
-
-<div class="w3-container w3-section">
+<div class="w3-container w3-section" style="margin-top:100px;">
     <div class="w3-row w3-margin">
         <div class="col-md-2 w3-hide-small">
 
@@ -32,9 +16,13 @@
             <div class="w3-card-4 w3-white w3-margin ">
 
                 <header class="w3-container w3-padding">
+
                     <a href="">
-                        <img src="" alt="Avatar" class="w3-left w3-circle">
+                        <img src="{{pic.profile_details.profile_image.url}}" alt="Avatar" class=" w3-left w3-circle" style="max-width:10%">
+                         <p><strong>  {{pic.profile.username}}</strong></p>
                     </a>
+
+
                 </header>
 
                 <div>
@@ -46,7 +34,7 @@
                     <i class="far fa-heart fa-2x w3-margin"></i>
 
                     <i class="far fa-comment fa-2x "></i>
-                    <p>{{pic.caption}}</p>
+                    <p class="w3-margin-left"><strong> {{pic.profile.username}} </strong>{{pic.caption}}</p>
                     <hr>
                     <input class="w3-input w3-block w3-margin-bottom" placeholder="Add Comment">
 

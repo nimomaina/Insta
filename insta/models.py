@@ -9,18 +9,14 @@ from tinymce.models import HTMLField
 # Create your models here.
 
 class Profile(models.Model):
-    profile_image =models.ImageField( blank=True, default='default.jpg', upload_to='prof')
+    profile_image =models.ImageField( blank=True, default='default.jpg', upload_to='profile/')
     bio = models.CharField(max_length=255)
     user = models.OneToOneField(User,blank=True, on_delete=models.CASCADE, related_name="profile")
 
     def __str__(self):
-        return str(self.bio)
+        return str(self.user)
 
-    @receiver(post_save, sender=User)
-    def update_user_profile(sender, instance, created, **kwargs):
-        if created:
-            Profile.objects.create(user=instance)
-        instance.profile.save()
+
 
 
     def profile_save(self):
