@@ -1,17 +1,26 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+
 from tinymce.models import HTMLField
 
 
 # Create your models here.
 
 class Profile(models.Model):
-    profile_image =models.ImageField( blank=True)
+    profile_image =models.ImageField( blank=True, default='default.jpg', upload_to='prof')
     bio = models.CharField(max_length=255)
-    owner = models.OneToOneField(User,blank=True, on_delete=models.CASCADE, related_name="profile")
+    user = models.OneToOneField(User,blank=True, on_delete=models.CASCADE, related_name="profile")
 
     def __str__(self):
         return str(self.bio)
+
+    @receiver(post_save, sender=User)
+    def update_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+        instance.profile.save()
 
 
     def profile_save(self):

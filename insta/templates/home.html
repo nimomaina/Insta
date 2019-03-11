@@ -4,13 +4,19 @@
 {% block content %}
 {{block.super}}
 
-    <div class="">
-    <div class="w3-bar w3-white w3-padding w3-wide w3-card ">
-        <a href="#" class="w3-bar-item w3-button"><i class="fab fa-instagram fa-2x"> | Instagram </i>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding  w3-card ">
+        <a href="#" class="w3-bar-item " style="border-right: 1px solid #000"><i class="fab fa-instagram fa-2x"> </i>
         </a>
+        <h2 class="w3-bar-item" style="font-family: 'Lobster'; ">Instagram
+        </h2>
 
-        <input type="text" class="w3-bar-item w3-input w3-light-grey w3-display-middle w3-hide-small" placeholder="Search">
-        <a href="#" class="w3-bar-item w3-right "><i class="far fa-user"></i></a>
+        <input type="text" class="w3-bar-item w3-input w3-light-grey w3-display-middle w3-hide-small"
+               placeholder="Search">
+
+        <a href="#" class="w3-bar-item w3-right "><i class="far fa-user fa-2x"></i></a>
+        <a href="#" class="w3-bar-item w3-right "><i class="fas fa-upload fa-2x"></i></a>
+
     </div>
 </div>
 
@@ -20,10 +26,10 @@
 
 
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 ">
             {% for pic in pics %}
 
-            <div class="w3-card-4 w3-white ">
+            <div class="w3-card-4 w3-white w3-margin ">
 
                 <header class="w3-container w3-padding">
                     <a href="">
@@ -33,7 +39,7 @@
 
                 <div>
 
-                    <img src="{{pic.image.url}}" class="w3-image" >
+                    <img src="{{pic.image.url}}" class="w3-image">
 
                 </div>
                 <div class="w3-container">
@@ -42,6 +48,8 @@
                     <i class="far fa-comment fa-2x "></i>
                     <p>{{pic.caption}}</p>
                     <hr>
+                    <input class="w3-input w3-block w3-margin-bottom" placeholder="Add Comment">
+
 
                 </div>
 
